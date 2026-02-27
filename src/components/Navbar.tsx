@@ -1,17 +1,36 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence, useMotionValueEvent, useScroll } from "framer-motion";
 import { navLinks } from "../data/siteData";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 50);
+  });
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
 
   return (
     <>
       {/* Fixed navbar */}
       <motion.header
-        className="fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between"
+        className={`fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between transition-all duration-500 ${
+          scrolled
+            ? "bg-[#0a0a0a]/80 backdrop-blur-md shadow-[0_1px_0_rgba(212,165,116,0.08)]"
+            : "bg-transparent"
+        }`}
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease }}

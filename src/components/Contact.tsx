@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-32 px-6 md:px-12">
       <motion.h2
-        className="text-center text-4xl md:text-5xl text-[#f5f0eb] tracking-wide mb-16"
+        className="text-center text-4xl md:text-5xl text-[#f5f0eb] tracking-wide"
         style={{ fontFamily: "Georgia, serif" }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -16,6 +16,17 @@ export default function Contact() {
       >
         Inquiries
       </motion.h2>
+
+      <motion.p
+        className="text-center text-[#a09080] max-w-md mx-auto mt-4 mb-16 text-sm leading-relaxed tracking-wide"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2, ease }}
+      >
+        For private dining engagements, consultancy, or bespoke culinary
+        experiences, please reach out below.
+      </motion.p>
 
       <form
         className="max-w-xl mx-auto space-y-6"
@@ -50,15 +61,18 @@ export default function Contact() {
 
         <motion.button
           type="submit"
-          className="w-full py-3 mt-4 bg-[#d4a574] text-[#0a0a0a] font-semibold tracking-widest uppercase text-sm rounded-lg cursor-pointer"
+          className="w-full py-3.5 mt-4 bg-[#d4a574] text-[#0a0a0a] font-semibold tracking-widest uppercase text-sm rounded-lg cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: contactFields.length * 0.1, ease }}
-          whileHover={{ scale: 1.02, boxShadow: "0 8px 30px rgba(212,165,116,0.3)" }}
+          whileHover={{
+            scale: 1.02,
+            boxShadow: "0 8px 30px rgba(212,165,116,0.3)",
+          }}
           whileTap={{ scale: 0.98 }}
         >
-          Submit
+          Send Inquiry
         </motion.button>
       </form>
     </section>

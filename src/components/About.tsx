@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { aboutImage, aboutBio, aboutBadges } from "../data/siteData";
 
@@ -6,12 +6,22 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    setIsDesktop(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
 
-  const imageX = useTransform(scrollYProgress, [0, 0.5], [120, 0]);
+  const imageX = useTransform(scrollYProgress, [0, 0.5], isDesktop ? [120, 0] : [0, 0]);
   const imageOpacity = useTransform(scrollYProgress, [0, 0.35], [0, 1]);
 
   return (
@@ -81,7 +91,7 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* Image — right with parallax */}
+        {/* Image — right with parallax (desktop only) */}
         <motion.div
           className="relative"
           style={{ x: imageX, opacity: imageOpacity }}
@@ -90,7 +100,7 @@ export default function About() {
             <img
               src={aboutImage}
               alt="Chef Kevin Thai"
-              className="w-full h-[500px] lg:h-[600px] object-cover"
+              className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover"
               draggable={false}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/40 to-transparent" />
