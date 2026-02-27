@@ -14,7 +14,7 @@ export default function Contact() {
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease }}
       >
-        Contact
+        Inquiries
       </motion.h2>
 
       <form

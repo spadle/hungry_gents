@@ -34,10 +34,10 @@ export default function Menu() {
           className="text-4xl md:text-5xl text-[#f5f0eb] tracking-wide"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          Sample Menu
+          Tasting Menu
         </h2>
         <p className="text-[#a09080] mt-3 tracking-widest uppercase text-sm">
-          Chef Kevin Thai
+          A Culinary Journey
         </p>
       </motion.div>
 

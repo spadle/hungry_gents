@@ -21,7 +21,7 @@ export default function Gallery() {
           className="text-4xl md:text-5xl text-[#f5f0eb] tracking-wide"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          The Food
+          The Cuisine
         </h2>
       </motion.div>
 

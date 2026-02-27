@@ -28,7 +28,7 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease }}
       >
-        About the Chef
+        The Chef
       </motion.h2>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

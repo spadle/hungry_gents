@@ -8,10 +8,10 @@ export const heroImages = [
 export const aboutImage = "/images/biography.jpg";
 
 export const aboutBio = [
-  "Chef Kevin Thai found his culinary passion at a young age growing up in the New York City borough of Manhattan. This led him to move to Paris, where he attended the renowned culinary academy, L'école Ferrandi Paris.",
-  "His talents led him into cooking at one of Paris' best and most respected restaurants, the three Michelin-star Restaurant Guy Savoy. There, his culinary talents were further cultivated. He was encouraged to explore pastry arts which led him to work for top pastry chef Julian Alvarez at the Peninsula Paris.",
-  "Adding pastry to his arsenal gave him a competitive edge and earned him a wonderful opportunity to travel around the world to places such as Australia and Copenhagen, cooking at incredible establishments like Two Michelin-star restaurant Kadeau, and Dominique Ansel Bakery.",
-  "Under the tutelage of these great chefs, he took on an executive chef position for a major New York restaurant group, running and overseeing all culinary aspects of its two restaurants. Currently, Chef Kevin spends his time consulting around the globe, performing select private chef engagements, and catering choice events.",
+  "Born and raised in Manhattan, Chef Kevin Thai discovered his calling in the kitchen at a young age. Drawn to the art of French gastronomy, he journeyed to Paris to study at the prestigious L'\u00e9cole Ferrandi Paris.",
+  "His pursuit of excellence led him to the legendary three Michelin-star Restaurant Guy Savoy \u2014 one of the most revered dining rooms in the world. There, his craft was refined and his palate sharpened. An invitation to explore the pastry arts brought him under the tutelage of master p\u00e2tissier Julian Alvarez at The Peninsula Paris.",
+  "With both savory and pastry mastery in his repertoire, Chef Thai earned opportunities across the globe \u2014 from Australia to Copenhagen, through kitchens such as the two Michelin-star Kadeau and the celebrated Dominique Ansel Bakery.",
+  "Drawing on this world-class foundation, he assumed the role of Executive Chef for a prominent New York restaurant group, overseeing all culinary operations across its properties. Today, Chef Kevin devotes his artistry to private dining engagements, global consultancy, and curating bespoke culinary experiences.",
 ];
 
 export const aboutBadges = [
@@ -34,7 +34,7 @@ export interface CourseSection {
 
 export const menuCourses: CourseSection[] = [
   {
-    course: "First Courses",
+    course: "To Begin",
     items: [
       {
         name: "Orange Fennel Salad",
@@ -49,7 +49,7 @@ export const menuCourses: CourseSection[] = [
     ],
   },
   {
-    course: "Second Course",
+    course: "The Interlude",
     items: [
       {
         name: "Fresh Corn & Stracciatella Cappelletti",
@@ -59,7 +59,7 @@ export const menuCourses: CourseSection[] = [
     ],
   },
   {
-    course: "Third Course",
+    course: "The Main",
     items: [
       {
         name: "Caramelized Beef Tenderloin",
@@ -69,7 +69,7 @@ export const menuCourses: CourseSection[] = [
     ],
   },
   {
-    course: "Dessert",
+    course: "To Finish",
     items: [
       {
         name: "Dessert Duo",
@@ -95,7 +95,7 @@ export const galleryImages = [
 ];
 
 export const galleryIntro =
-  "My cuisine is crafted with seasonal and hyper-seasonal ingredients, focusing on collaboration with local farms and purveyors to create delicious, mindful dishes.";
+  "Crafted with seasonal and hyper-seasonal ingredients, each dish reflects an intimate collaboration with local farms and artisan purveyors \u2014 a celebration of provenance, technique, and the fleeting beauty of the harvest.";
 
 export const contactFields = [
   { name: "Name", type: "text", placeholder: "Enter your name" },
