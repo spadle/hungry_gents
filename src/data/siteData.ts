@@ -1,13 +1,11 @@
-const NETLIFY = "https://polite-seahorse-098583.netlify.app";
-
 export const heroImages = [
-  `${NETLIFY}/images/minified/background2.jpg`,
-  `${NETLIFY}/images/minified/background3.jpg`,
-  `${NETLIFY}/images/minified/background4.jpg`,
-  `${NETLIFY}/images/minified/background5.jpg`,
+  "/images/minified/background2.jpg",
+  "/images/minified/background3.jpg",
+  "/images/minified/background4.jpg",
+  "/images/minified/background5.jpg",
 ];
 
-export const aboutImage = `${NETLIFY}/images/biography.jpg`;
+export const aboutImage = "/images/biography.jpg";
 
 export const aboutBio = [
   "Chef Kevin Thai found his culinary passion at a young age growing up in the New York City borough of Manhattan. This led him to move to Paris, where he attended the renowned culinary academy, L'école Ferrandi Paris.",
@@ -82,18 +80,18 @@ export const menuCourses: CourseSection[] = [
 ];
 
 export const galleryImages = [
-  `${NETLIFY}/images/food5.jpg`,
-  `${NETLIFY}/images/food11.jpg`,
-  `${NETLIFY}/images/food7.jpg`,
-  `${NETLIFY}/images/food8.jpg`,
-  `${NETLIFY}/images/food12.jpg`,
-  `${NETLIFY}/images/food9.jpg`,
-  `${NETLIFY}/images/background9.jpg`,
-  `${NETLIFY}/images/food10.jpg`,
-  `${NETLIFY}/images/food15.jpg`,
-  `${NETLIFY}/images/food16.jpg`,
-  `${NETLIFY}/images/food13.jpg`,
-  `${NETLIFY}/images/food145.jpg`,
+  "/images/food5.jpg",
+  "/images/food11.jpg",
+  "/images/food7.jpg",
+  "/images/food8.jpg",
+  "/images/food12.jpg",
+  "/images/food9.jpg",
+  "/images/background9.jpg",
+  "/images/food10.jpg",
+  "/images/food15.jpg",
+  "/images/food16.jpg",
+  "/images/food13.jpg",
+  "/images/food145.jpg",
 ];
 
 export const galleryIntro =
