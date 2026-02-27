@@ -24,17 +24,17 @@ export default function Hero() {
       id="home"
       className="relative h-screen w-full overflow-hidden flex items-center justify-center"
     >
-      {/* Background carousel with subtle zoom */}
+      {/* Background carousel */}
       <AnimatePresence mode="sync">
         <motion.img
           key={current}
           src={heroImages[current]}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.4, ease }}
+          transition={{ duration: 1.2, ease }}
           draggable={false}
         />
       </AnimatePresence>
